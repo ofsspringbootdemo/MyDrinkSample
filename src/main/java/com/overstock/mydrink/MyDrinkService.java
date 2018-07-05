@@ -11,7 +11,7 @@ import java.util.Random;
 public class MyDrinkService {
     public MyDrink getMyDrink(String drinkName, String drinkType, String drinkSize) {
         MyDrink drink = new MyDrink();
-        drink.setOrderId(new Random().toString());
+        drink.setOrderId(String.valueOf(new Random().nextInt(9000000) + 1000000));
         drink.setName(drinkName);
         drink.setType(drinkType);
         drink.setSize(drinkSize);
